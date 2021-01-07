@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import 'jest-styled-components';
@@ -12,9 +11,11 @@ describe('<App />', () => {
     const minusButton = screen.getByText('-');
     expect(minusButton).toBeInTheDocument();
     expect(minusButton).toHaveStyleRule('background-color', '#FF1744');
+
     const plusButton = screen.getByText('+');
     expect(plusButton).toBeInTheDocument();
     expect(plusButton).toHaveStyleRule('background-color', '#304FFE');
+
     const label = screen.getByText('0');
     expect(label).toBeInTheDocument();
 
